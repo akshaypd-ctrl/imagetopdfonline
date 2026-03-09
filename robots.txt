@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://imagetopdf-online.netlify.app/sitemap.xml
