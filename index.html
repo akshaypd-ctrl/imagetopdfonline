@@ -1,42 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Image to PDF Converter</title>
+
+<title>Free Image to PDF Converter</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+text-align:center;
+margin:0;
+padding:0
+}
+
+header{
+background:#007bff;
+color:white;
+padding:20px;
+font-size:24px
+}
+
+.container{
+background:white;
+margin:40px auto;
+padding:30px;
+max-width:500px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2)
+}
+
+button{
+padding:12px 20px;
+font-size:16px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer
+}
+
+button:hover{
+background:#0056b3
+}
+
+footer{
+margin-top:40px;
+padding:15px;
+background:#eee;
+font-size:14px
+}
+
+</style>
+
 </head>
 
 <body>
-  <h1>Free Online Tools</h1>
 
-<p>Use our free online tools like Image to PDF, JPG to PNG and more.</p>
+<header>
+Free Image to PDF Converter
+</header>
 
-<ul>
+<div class="container">
 
-<li><a href="#">Image to PDF Converter</a></li>
-<li><a href="#">PDF to Image Converter</a></li>
-<li><a href="#">JPG to PNG Converter</a></li>
-<li><a href="#">PNG to JPG Converter</a></li>
-<li><a href="#">Image Compressor</a></li>
-<li><a href="#">Image Resizer</a></li>
-<li><a href="#">PDF Merge Tool</a></li>
-<li><a href="#">PDF Split Tool</a></li>
-<li><a href="#">Rotate Image Tool</a></li>
-<li><a href="#">PDF to Word Converter</a></li>
-<li><a href="#">Word to PDF Converter</a></li>
-<li><a href="#">PNG to PDF Converter</a></li>
-<li><a href="#">JPG to PDF Converter</a></li>
-<li><a href="#">Image Crop Tool</a></li>
-<li><a href="#">Image Rotate Tool</a></li>
-
-</ul>
-
-<h2>Image to PDF Converter</h2>
+<h2>Convert Image to PDF</h2>
 
 <input type="file" id="imageFile" accept="image/*">
 
 <br><br>
 
 <button onclick="makePDF()">Convert to PDF</button>
+
+</div>
+
+<footer>
+© 2026 Image to PDF Tool
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
@@ -58,23 +99,4 @@ reader.onload = function(e){
 const img = new Image();
 img.src = e.target.result;
 
-img.onload = function(){
-
-const { jsPDF } = window.jspdf;
-const pdf = new jsPDF();
-pdf.addImage(img.src,'JPEG',10,10,180,160);
-
-pdf.save("converted.pdf");
-
-}
-
-}
-
-reader.readAsDataURL(file);
-
-}
-
-</script>
-
-</body>
-</html>
+img.onload =
