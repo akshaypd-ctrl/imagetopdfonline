@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="google-site-verification" 
-    content="KqlLKsnfPEjYLe3vEMDI4kBgq5yA3poj3majW52sz48" />
-<title>Image to PDF Converter</title>
+<title>Free Online Tools</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 <style>
 body{
 font-family:Arial;
@@ -20,19 +15,19 @@ padding:40px
 background:white;
 padding:30px;
 border-radius:10px;
-max-width:400px;
+max-width:500px;
 margin:auto;
 box-shadow:0 0 10px rgba(0,0,0,0.2)
 }
 
 button{
 padding:12px 20px;
+margin:8px;
 font-size:16px;
 background:#007bff;
 color:white;
 border:none;
-border-radius:6px;
-margin-top:10px
+border-radius:6px
 }
 </style>
 </head>
@@ -40,55 +35,11 @@ margin-top:10px
 <body>
 
 <div class="box">
+<h2>Free Online Tools</h2>
 
-<h2>Image to PDF Converter</h2>
-
-<input type="file" id="imageFile">
-
-<br>
-
-<button onclick="makePDF()">Convert to PDF</button>
-
-</div>
-
-<script>
-
-function makePDF(){
-
-const file=document.getElementById("imageFile").files[0];
-
-if(!file){
-alert("Please select image");
-return;
-}
-
-const reader=new FileReader();
-
-reader.onload=function(e){
-
-const img=new Image();
-
-img.onload=function(){
-
-const {jsPDF}=window.jspdf;
-
-const pdf=new jsPDF();
-
-pdf.addImage(img,'JPEG',10,10,180,160);
-
-pdf.save("image.pdf");
-
-}
-
-img.src=e.target.result;
-
-}
-
-reader.readAsDataURL(file);
-
-}
-
-</script>
-
-</body>
-</html>
+<button>Image to PDF</button>
+<button>PDF to Image</button>
+<button>JPG to PNG</button>
+<button>PNG to JPG</button>
+<button>Image Compressor</button>
+<button>
