@@ -3,8 +3,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://imagetopdf-online.netlify.app/</loc>
+<loc>https://imagetopdfonline.pages.dev/</loc>
 <priority>1.00</priority>
+</url>
+
+<url>
+<loc>https://imagetopdfonline.pages.dev/word-counter.html</loc>
+</url>
+
+<url>
+<loc>https://imagetopdfonline.pages.dev/password-generator.html</loc>
+</url>
+
+<url>
+<loc>https://imagetopdfonline.pages.dev/qr-code-generator.html</loc>
 </url>
 
 </urlset>
