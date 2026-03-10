@@ -1,56 +1,19 @@
-<!DOCTYPE html>
-<html>
-  
-
-<head>
-  <meta name="google-site-verification" content="d-TpjIxwe6BbFWTaDffs8Y79IYM-GCTEaJeN1SJLUhI" />
-<link rel="canonical" href="https://imagetopdfonline.pages.dev/">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R43MLVMVP4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R43MLVMVP4');
-</script>
-
-<title>Image to PDF Converter Online Free | JPG to PDF Tool</title>
-  <meta name="description" content="Convert image to PDF online free. JPG, PNG images ko instantly PDF me convert kare bina software install kiye.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<style>
-
-    <h2>Free Online Tools</h2>
-
-<div class="tools">
-
-<a href="word-counter.html" class="tool-btn">Word Counter</a>
-
-<a href="character-counter.html" class="tool-btn">Character Counter</a>
-
-<a href="qr-code-generator.html" class="tool-btn">QR Code Generator</a>
-
-<a href="password-generator.html" class="tool-btn">Password Generator</a>
-
-<a href="compress-image.html" class="tool-btn">Image Compressor</a>
-
-</div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Image to PDF Converter Online Free | JPG to PDF Tool</title><meta name="description" content="Convert image to PDF online free. JPG, PNG images ko instantly PDF me convert kare bina kisi software ke."><meta name="google-site-verification" content="d-TpjIxwe6BbFWTaDffs8Y79IYM-GCTEaJeN1SJLuhI"><link rel="canonical" href="https://imagetopdfonline.pages.dev/"><style>
 
 body{
 font-family:Arial;
 background:#f4f6f9;
 text-align:center;
 margin:0;
-padding:0
+padding:0;
 }
 
 header{
 background:#007bff;
 color:white;
 padding:20px;
-font-size:24px
+font-size:24px;
 }
 
 .container{
@@ -59,7 +22,25 @@ margin:40px auto;
 padding:30px;
 max-width:500px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2)
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.tools{
+margin-top:20px;
+}
+
+.tool-btn{
+display:block;
+margin:10px;
+padding:10px;
+background:#007bff;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.tool-btn:hover{
+background:#0056b3;
 }
 
 button{
@@ -69,95 +50,80 @@ background:#007bff;
 color:white;
 border:none;
 border-radius:6px;
-cursor:pointer
+cursor:pointer;
 }
 
 button:hover{
-background:#0056b3
+background:#0056b3;
 }
 
 footer{
 margin-top:40px;
 padding:15px;
 background:#eee;
-font-size:14px
+font-size:14px;
 }
 
-</style>
-</head>
-
-<body>
-  <h2>Free Online Tools</h2>
-
-<ul>
-<li><a href="word-counter.html">Word Counter</a></li>
-<li><a href="password-generator.html">Password Generator</a></li>
-<li><a href="qr-code-generator.html">QR Code Generator</a></li>
-</ul>
-
-<header>
+</style></head><body><header>
 Free Image to PDF Converter
-</header>
-
-<div class="container">
-  <h2>Free Online Tools</h2>
-
-<div class="tools">
-
-<a href="word-counter.html" class="tool-btn">Word Counter</a>
-
-<a href="character-counter.html" class="tool-btn">Character Counter</a>
-
-<a href="qr-code-generator.html" class="tool-btn">QR Code Generator</a>
-
-<a href="password-generator.html" class="tool-btn">Password Generator</a>
-
-<a href="compress-image.html" class="tool-btn">Image Compressor</a>
-
-</div>
-
-<h2>Convert Image to PDF</h2>
-
-<input type="file" id="imageFile" accept="image/*">
-
-<br><br>
+</header><div class="container"><h2>Convert Image to PDF</h2><input type="file" id="imageFile" accept="image/*"><br><br>
 
 <button onclick="makePDF()">Convert to PDF</button>
 
-</div>
+</div><div class="container"><h2>Free Online Tools</h2><div class="tools"><a href="word-counter.html" class="tool-btn">Word Counter</a>
 
-<footer>
-© 2026 Image to PDF Tool
-<br>
-<a href="privacy-policy.html">Privacy Policy</a>
-</footer>
-  <footer>
-© 2026 Image to PDF Tool
-<br>
+<a href="password-generator.html" class="tool-btn">Password Generator</a>
+
+<a href="qr-code-generator.html" class="tool-btn">QR Code Generator</a>
+
+<a href="character-counter.html" class="tool-btn">Character Counter</a>
+
+</div></div><footer>© 2026 Image to PDF Tool
+
+<br><br>
+
 <a href="about.html">About</a> |
+
 <a href="privacy-policy.html">Privacy Policy</a>
-  </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script>
 
-<script>
+async function makePDF(){
 
-function makePDF(){
-
-const file = document.getElementById("imageFile").files[0];
+const file=document.getElementById("imageFile").files[0];
 
 if(!file){
+
 alert("Please select an image");
+
 return;
+
 }
 
-const reader = new FileReader();
+const reader=new FileReader();
 
-reader.onload = function(e){
+reader.onload=function(e){
 
-const img = new Image();
-img.src = e.target.result;
+const img=new Image();
 
-img.onload =
-  <a href="about.html">About Us</a> |
-<a href="privacy-policy.html">Privacy Policy</a>
+img.src=e.target.result;
+
+img.onload=function(){
+
+const { jsPDF } = window.jspdf;
+
+const pdf=new jsPDF();
+
+pdf.addImage(img,'JPEG',10,10,180,160);
+
+pdf.save("converted.pdf");
+
+}
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+</script></body></html>
