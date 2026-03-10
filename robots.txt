@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://imagetopdf-online.netlify.app/sitemap.xml
+Sitemap: https://imagetopdfonline.pages.dev/sitemap.xml
