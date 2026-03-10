@@ -1,5 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Image to PDF Converter Online Free | JPG to PDF Tool</title><meta name="description" content="Convert image to PDF online free. JPG, PNG images ko instantly PDF me convert kare bina kisi software ke."><link rel="canonical" href="https://imagetopdfonline.pages.dev/"><style>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Image to PDF Converter Online Free | JPG to PDF Tool</title><meta name="description" content="Convert image to PDF online free. JPG and PNG images ko instantly PDF me convert kare."><link rel="canonical" href="https://imagetopdfonline.pages.dev/"><style>
 
 body{
 font-family:Arial;
@@ -32,7 +33,7 @@ margin-top:20px;
 .tool-btn{
 display:block;
 margin:10px;
-padding:10px;
+padding:12px;
 background:#007bff;
 color:white;
 text-decoration:none;
@@ -83,21 +84,17 @@ Free Image to PDF Converter
 <br><br>
 
 <a href="about.html">About</a> |
-
 <a href="privacy-policy.html">Privacy Policy</a>
 
 </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script>
 
-async function makePDF(){
+function makePDF(){
 
 const file=document.getElementById("imageFile").files[0];
 
 if(!file){
-
 alert("Please select an image");
-
 return;
-
 }
 
 const reader=new FileReader();
@@ -105,7 +102,6 @@ const reader=new FileReader();
 reader.onload=function(e){
 
 const img=new Image();
-
 img.src=e.target.result;
 
 img.onload=function(){
