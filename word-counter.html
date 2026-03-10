@@ -1,104 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Word Counter Tool</title>
+<title>Free Word Counter Tool</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-
 body{
 font-family:Arial;
-background:#f4f6f9;
 text-align:center;
-margin:0;
-padding:0;
-}
-
-header{
-background:#007bff;
-color:white;
+background:#f4f6f9;
 padding:20px;
-font-size:24px;
-}
-
-.container{
-background:white;
-margin:40px auto;
-padding:30px;
-max-width:600px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
 textarea{
-width:100%;
+width:90%;
 height:150px;
 padding:10px;
-font-size:16px;
+}
+
+button{
+padding:10px 20px;
+background:#007bff;
+color:white;
+border:none;
+cursor:pointer;
+margin-top:10px;
 }
 
 .result{
 margin-top:20px;
-font-size:18px;
+font-size:20px;
 }
-
 </style>
 
 </head>
 
 <body>
 
-<header>
-Free Word Counter Tool
-</header>
+<h1>Word Counter Tool</h1>
 
-<div class="container">
+<textarea id="text"></textarea>
 
-<h2>Count Words & Characters</h2>
+<br>
 
-<textarea id="text" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
+<button onclick="countWords()">Count Words</button>
 
-<div class="result">
+<div class="result" id="result"></div>
 
-<p>Words: <span id="words">0</span></p>
-
-<p>Characters: <span id="characters">0</span></p>
-
-</div>
-
-</div>
-<h2>Free Word Counter Tool</h2>
-
-<p>This free word counter tool helps you count words and characters instantly. 
-You can type or paste your text and see the total number of words and characters in real time.</p>
-
-<h3>Features</h3>
-
-<ul>
-<li>Count words instantly</li>
-<li>Count characters easily</li>
-<li>Simple and fast online tool</li>
-</ul>
 <script>
+function countWords(){
 
-function countText(){
+let text=document.getElementById("text").value;
 
-let text = document.getElementById("text").value;
+let words=text.trim().split(/\s+/).length;
 
-let words = text.trim().split(/\s+/).filter(function(word){
-return word.length > 0;
-}).length;
+let characters=text.length;
 
-let characters = text.length;
-
-document.getElementById("words").innerText = words;
-
-document.getElementById("characters").innerText = characters;
+document.getElementById("result").innerHTML =
+"Words: "+words+"<br>Characters: "+characters;
 
 }
-
 </script>
+
+<br><br>
+<a href="/">Home</a>
 
 </body>
 </html>
